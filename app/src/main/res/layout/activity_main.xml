@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp">
+
+    <Button
+        android:id="@+id/btnInserir"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Nova Tarefa"
+        android:layout_margin="4dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/btnEditar"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/btnVisualizar"
+        app:layout_constraintVertical_chainStyle="packed" />
+
+    <Button
+        android:id="@+id/btnVisualizar"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Listar Tarefas"
+        android:layout_margin="4dp"
+        app:layout_constraintTop_toTopOf="@id/btnInserir"
+        app:layout_constraintBottom_toBottomOf="@id/btnInserir"
+        app:layout_constraintStart_toEndOf="@id/btnInserir"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <Button
+        android:id="@+id/btnEditar"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Editar Tarefa"
+        android:layout_margin="4dp"
+        app:layout_constraintTop_toBottomOf="@id/btnInserir"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/btnDeletar" />
+
+    <Button
+        android:id="@+id/btnDeletar"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Deletar Tarefa"
+        android:layout_margin="4dp"
+        app:layout_constraintTop_toTopOf="@id/btnEditar"
+        app:layout_constraintBottom_toBottomOf="@id/btnEditar"
+        app:layout_constraintStart_toEndOf="@id/btnEditar"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -3,6 +3,8 @@ package com.example.controladortarefas
 import android.content.Intent
 import android.os.Bundle
 import android.widget.Button
+import android.widget.SeekBar
+import android.widget.TextView
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
@@ -20,26 +22,9 @@ class MainActivity : AppCompatActivity() {
         val btnDel = findViewById<Button>(R.id.btnDeletar)
 
         btnAdd.setOnClickListener {
-            val intent: Intent(this, AdicionarActivity::class.java)
+            val intent = Intent(this, AdicionarActivity::class.java)
             startActivity(intent)
         }
 
-        btnEdit.setOnClickListener {
-            val intent: Intent(this, EditarActivity::class.java)
-
-            startActivity(intent)
-        }
-
-        btnList.setOnClickListener {
-            val intent: Intent(this, VisualizarActivity::class.java)
-
-            startActivity(intent)
-        }
-
-        btnDel.setOnClickListener {
-            val intent: Intent(this, DeletarrActivity::class.java)
-
-            startActivity(intent)
-        }
     }
 }

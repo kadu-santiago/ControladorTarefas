@@ -23,6 +23,10 @@
         <activity
             android:name=".AdicionarActivity"
             android:exported="true"/>
+        <activity android:name=".EditarActivity"
+            android:exported="true"/>
+        <activity android:name=".ListarActivity"
+            android:exported="true"/>
 
     </application>
 

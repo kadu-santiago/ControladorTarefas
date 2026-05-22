@@ -54,7 +54,7 @@ class EditarActivity : AppCompatActivity() {
             if (novaDescricao.isNotEmpty() && novoResponsavel.isNotEmpty()) {
                 val db = TarefaHelper(this)
                 val tarefaAtualizada = Tarefa(tarefaId, novaDescricao, novoResponsavel, novoStatus)
-                val linhasAfetadas = db.atualizar(tarefaAtualizada)
+                val linhasAfetadas = db.atualizarTarefa(tarefaAtualizada)
 
                 if (linhasAfetadas > 0) {
                     Toast.makeText(this, "Tarefa atualizada com sucesso!", Toast.LENGTH_SHORT).show()

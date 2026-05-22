@@ -85,4 +85,20 @@ class TarefaHelper (context: Context):
         db.close()
         return sucesso
     }
+
+    fun buscarIdPorDescricao(descricaoPesquisa: String): Int {
+        val db = this.readableDatabase
+        val cursor = db.rawQuery("SELECT $COL_ID FROM $TABLE_NAME WHERE $COL_DESCRICAO = ?", arrayOf(descricaoPesquisa))
+
+        var idEncontrado = -1
+        if (cursor.moveToFirst()) {
+            val indiceId = cursor.getColumnIndex(COL_ID)
+            if (indiceId != -1) {
+                idEncontrado = cursor.getInt(indiceId)
+            }
+        }
+        cursor.close()
+        db.close()
+        return idEncontrado
+    }
 }

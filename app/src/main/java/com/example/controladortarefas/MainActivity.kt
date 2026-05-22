@@ -31,13 +31,13 @@ class MainActivity : AppCompatActivity() {
         }
 
         btnList.setOnClickListener {
-            val intent = Intent(this, VisualizarActivity::class.java)
+            val intent = Intent(this, ListarActivity::class.java)
 
             startActivity(intent)
         }
 
         btnDel.setOnClickListener {
-            val intent = Intent(this, DeletarrActivity::class.java)
+            val intent = Intent(this, DeletarActivity::class.java)
 
             startActivity(intent)
         }

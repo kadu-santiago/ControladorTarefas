@@ -1,5 +1,6 @@
 package com.example.controladortarefas
 
+import android.content.Intent
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -21,6 +22,17 @@ class TarefaAdapter(private val listaTarefas: List<Tarefa>) :
         holder.txtDescricao.text = tarefa.descricao
         holder.txtResponsavel.text = "Responsável: ${tarefa.responsavel}"
         holder.txtStatus.text = "Progresso: ${tarefa.status}%"
+
+        holder.itemView.setOnClickListener {
+            val context = holder.itemView.context
+            val intent = Intent(context, EditarActivity::class.java).apply {
+                putExtra("TAREFA_ID", tarefa.id)
+                putExtra("TAREFA_DESCRICAO", tarefa.descricao)
+                putExtra("TAREFA_RESPONSAVEL", tarefa.responsavel)
+                putExtra("TAREFA_STATUS", tarefa.status)
+            }
+            context.startActivity(intent)
+        }
     }
 
     override fun getItemCount() = listaTarefas.size

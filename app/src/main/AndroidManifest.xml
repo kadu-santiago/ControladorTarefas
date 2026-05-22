@@ -27,6 +27,8 @@
             android:exported="true"/>
         <activity android:name=".ListarActivity"
             android:exported="true"/>
+        <activity android:name=".DeletarActivity"
+            android:exported="true"/>
 
     </application>
 
